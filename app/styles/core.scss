@@ -1,0 +1,67 @@
+
+// Some best-practice CSS that's useful for most apps
+// Just remove them if they're not what you want
+html {
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  height: 100vh;
+}
+
+button {
+  background-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.hint-block {
+  color: #999;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.error {
+  composes: hint-block;
+  text-align: center;
+  color: red;
+}
+
+main {
+}
+
+main,
+body {
+}
+
+mark {
+  background-color: transparent;
+}
+
+::placeholder {
+  user-select: none;
+}

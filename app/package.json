@@ -1,0 +1,21 @@
+{
+  "name": "serialnumber",
+  "productName": "Numéro de serie",
+  "version": "1.0.0",
+  "description": "Calculer votre numéro de serie",
+  "main": "./main.prod.js",
+  "author": {
+    "name": "Amadou Cisse",
+    "email": "cisse.amadou.9@gmail.com",
+    "url": "https://github.com/amsayk"
+  },
+  "scripts": {
+    "postinstall": "npm rebuild --runtime=electron --target=1.8.0 --disturl=https://atom.io/download/atom-shell --build-from-source"
+  },
+  "dependencies": {
+    "electron-context-menu": "^0.9.1",
+    "electron-store": "^1.3.0",
+    "serial-number": "^1.3.0"
+  },
+  "devDependencies": {}
+}

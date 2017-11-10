@@ -1,0 +1,17 @@
+.center {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.root {
+  composes: center;
+
+}
+
+.serialnumber {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 5.5px;
+}

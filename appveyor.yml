@@ -1,0 +1,32 @@
+---
+branches:
+  only:
+    - master
+build: false
+build_script:
+  - "npm run package-win"
+cache:
+  - '%APPDATA%\npm-cache'
+clone_depth: 1
+environment:
+  matrix:
+    - nodejs_version: 8
+image: "Visual Studio 2015"
+init:
+  - "git config --global core.autocrlf input"
+install:
+  - ps: "Install-Product node $env:nodejs_version"
+  - "npm install --global --production windows-build-tools"
+  - "npm install --global node-gyp"
+  - "cd app && npm install node-gyp"
+  - "cd app && yarn install"
+  - "yarn install"
+matrix:
+  fast_finish: true
+platform:
+  - x64
+shallow_clone: true
+test: false
+version: "{build}"
+artifacts:
+  - path: release\*.exe
